@@ -5,7 +5,7 @@
 
 # Kokoa Clone 2026 Update
 
-CSS got so much better!
+HTML & CSS are so much fun!
 
 <!-- 이 상태에서 깃헙 데톱을 열면 README.md 파일의 내용을 확인할 수 있다
 후에 커밋을 하려면 커밋 타이틀이 필요 Description은 필요없음 -->
