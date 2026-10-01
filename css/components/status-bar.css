@@ -1,0 +1,40 @@
+
+.status-bar {
+    position: fixed;
+    top: 0; /* 화면 상단에 고정 */
+    width: 100%; /* 화면 상단에 고정될 때 전체 너비 차지 */
+    box-sizing: border-box;
+    display: flex;
+    /* justify-content: space-between; */
+    /* 우리가 딱 원하는 위치에 배치할 수 없음(시계부분이 좀 애매함) */
+    justify-content: center;
+    padding: 5px 3px;
+
+    
+}
+
+.status-bar__column {
+    width: 33%;
+}
+/* 여기까지 보면 status-bar가 중앙 밀집했다가 33%씩 공간 가짐 */
+
+.status-bar__column:first-child span {
+    margin-right: 5px;
+}
+
+.status-bar__column:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+
+.status-bar__column:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.status-bar__column .fa-battery-full {
+    margin : 0px 5px;
+}
+
+

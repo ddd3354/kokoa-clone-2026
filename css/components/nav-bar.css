@@ -1,0 +1,28 @@
+.nav {
+    position: fixed;
+    bottom: 0; /* 화면 하단에 고정 */
+    width: 100%; /* width: 100% = 브라우저 가로 전체(fixed일땐 viewport 기준이라서, 원랜 부모 기준)
+    ㄴ ellipsis가 사라짐 : padding도 있어서 css는 box크기를 padding을 포함한 크기로 계산함*/
+    background-color: #f9f9fa;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    /* 이건 내가 padding을 줘도 신경X, 내 box사이즈를 늘리지마 
+    ㄴ css에게 width: 100%(200px 가정) 만들라함 -> 근데 padding 추가(50px) 
+    -> 실제 박스 크기는 200px + 50px = 250px, 왜냐면 css는 기본적으로 내가 원한 200px을 유지
+    근데 box-sizing: border-box를 사용시 100%(200px)을 유지하기 위해 box를 padding을 포함한 크기로 계산함 (50+150=200) */
+    
+    border-top: 1px solid rgba(121, 121, 121, 0.3);
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+/* flex는 적용한 요소의 “직계 자식”을 정렬
+    nav에 flex를 걸면 정렬 대상은 직계 자식인 ul 하나뿐
+    ㄴ 이건 사실상 ul 하나를 flex item으로 만든 것
+    => li를 정렬하고 싶으니까 그 부모인 ul.nav__list에 flex를 걸어야 함 */
+}
+
+.nav__link {
+    color: #2e363e;
+}

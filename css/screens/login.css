@@ -1,0 +1,102 @@
+
+body {
+    font-family : system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    /* google fonts -> open sans(무료) 검색, 이 중 하나 클릭해서 
+    "Select this style" */
+}
+
+.welcome-header {
+    margin: 90px 0px;
+    text-align: center;
+    display: flex; 
+    /* flex로 중앙 정렬 가능 */
+    flex-direction: column;
+    /* flex-direction: column;은 자식 요소들을 세로로 배치함 */
+    align-items: center;
+    /* align-items: center;는 자식 요소들을 가로로 중앙 정렬함 
+    ㄴ 왜냐하면 direction 기본값 row인데, 세로로 배치하려면 column으로 바꿔야 함
+    ㄴ 이때 주축(main axis) ↓ / 세로반대축(cross axis) → 가로가 돼서 
+    -> align-items: center; -> 가로로 중앙 정렬됨 */
+
+}
+
+.welcome-header__title {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.welcome-header__text {
+    width: 60%;
+    opacity: 0.6;
+
+/* 부모 전체 100%
+┌──────────────────────────────┐
+│┌──────────────┐              │
+││ p width 50%  │              │
+│└──────────────┘              │
+└──────────────────────────────┘
+ ↑ 기본적으로 왼쪽에 붙음 */
+
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 30px;
+}
+
+#login-form input {
+    border: none;
+    padding: 15px 0px;
+    font-size: 18px;
+    margin-bottom: 25px; /* input들 사이에 간격 추가 */
+}
+
+#login-form input:not([type="submit"]) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease-in-out;
+    /* #login-form 안의 input 중에서 type="submit"인 애만 빼고 나머지
+    input에 밑줄 그어라 */
+
+}
+
+#login-form input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+    /* login-form 안의 input 중에서 placeholder 글자만 선택 */
+}
+
+#login-form input:focus {
+    border-color: var(--yellow);
+}
+/* “나중에 다른 input들이 생길 수도 있으니까, 
+지금 로그인 폼 안에 있는 input만 골라서 꾸밈 */
+
+#login-form input[type="submit"] {
+    /* #login-form 안에 있는 input 중에서
+        type 속성이 "submit"인 것만 선택 */
+
+        background-color: var(--yellow);
+        cursor: pointer; 
+        /* 마우스 올리면 포인터로 변경
+        ㄴ cursor 종류는 pointer, default, text, move 등 다양함 */
+        padding: 20px 0px; /* 상하 20px, 좌우 0px */
+        border-radius: 5px; /* 모서리를 둥글게 */
+
+}
+
+#login-form a {
+    text-align: center;
+    /* login-form 안의 a 태그를 가운데 정렬 */
+    text-decoration: none; /* a 태그의 기본 밑줄 제거 */
+    color: inherit; 
+    /* 부모로부터 색을 "상속"받음 BUT 부모쪽에 색이 없으면 기본 색상(검정) 적용 */
+    font-size: 14px; /* a 태그 글자 크기 설정 */
+}
+/* 
+만약 위 로그인폼을 BEM 스타일로 바꾼다면
+.login-form__input {
+} -> 이메일, 비번 인풋에 적용될 스타일을 적음
+
+.login-form__btn {
+} -> 로그인 버튼에 적용될 스타일을 적음 
+ */

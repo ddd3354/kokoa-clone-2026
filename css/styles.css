@@ -1,0 +1,17 @@
+@import "reset.css";
+@import "variables.css";
+
+/* components : 페이지 안에 들어가는 공통 부품(위에 status-bar 등)*/
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+
+/* screens : 특정 화면(페이지) 관련 CSS */
+@import "screens/login.css";
+
+/*
+@import = 다른 CSS 파일을 현재 CSS 파일에 가져오는 문법
+그리고 보통 @import들은 파일 맨 위에 둬야 함.
+=> 그러면 html 파일은 styles.css만 링크하고 
+다른 CSS 파일들은 모두 styles.css를 통해 관리가능.
+ㄴ 또한 styles.css파일엔 font-family 같은 모든 스크린에 공통으로 적용될 스타일을 적음 */
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- link:css 엔터 치면 알아서 생성
+     그리고 파일 경로 따로 설정 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Kokoa Talk</title>
+</head>
+<body>
+    <div class="status-bar"> 
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fa-solid fa-wifi"></i>
+        </div>
+
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+
+        <div class="status-bar__column">
+            <span>110%</span>
+            <i class="fa-solid fa-battery-full"></i>
+            <i class="fa-solid fa-bolt"></i>
+        </div>
+    </div>
+
+    <!-- header가 엄청 많을텐데 css에 어떤 header를 가르키는지 
+     알려줄 필요가 있어서 그냥 header 태그 사용은 지양 -->
+    <header class = "welcome-header"> 
+        <h1 class="welcome-header__title">Welcome to KokoaTalk</h1>
+        <p class="welcome-header__text">
+            If you have a Kokoa Account, log in with your email or phone number.
+        </p>
+    </header>
+
+    <!-- 폼은 아주 중요한 2가지 속성(action, method)을 가짐 
+         1. action: 어떤 페이지로 data를 보낼건지 지정 가능
+         2. method: 데이터를 전송하는 방식(get, post) 
+         ㄴ post : 백엔드 서버에 정보를 전송하는 방식
+         ㄴ get : URL에 데이터를 붙여서 전송하는 방식(보안 취약)
+         ㄴ 그래서 유저명이랑 비번은 post 방식으로 전송해야 함
+         ㄴ url에 포함되어도 상관없는 정보들을 get 방식으로 전송하는 것-->
+    <form action="friends.html" method="get" id="login-form">
+        <!-- 액션을 설정했기에 다른 페이지로 이동 가능 
+         -> 액션에 적어놓은 url에 해당하는 파일은 반드시 존재해야함 -->
+        <input name="username" type="text" placeholder="Email or phone number">
+        <input name="password" type="password" placeholder="Password">
+        <!-- 작성후 로그인하면 friends.html로 이동
+         ㄴ 그리고 url을 보면 file:///C:/Users/user/Desktop/HTML%20&%20CSS/kokoa-clone/kokoa-clone-2026/friends.html?username=ddf&password=sdff
+         ㄴ 작성한 내용 전부가 URL에 포함됨 -->
+        
+
+        <input type="submit" value="Log In">
+        <!-- <button>으로도 로그인을 구현할 수 있습니다. -->
+        <a href="#">Find KoKoa Account or Password</a>
+        <!-- 
+        href="#" = 실제 링크가 아직 없을 때 임시로 넣는 값, 클릭하면 현재 페이지의 위쪽으로 이동할 수 있음.
+        form 안 = 로그인 폼에 속한 UI로 묶어서 배치/스타일하기 편함
+        form 밖 = 로그인 폼과 별개의 요소가 됨 
+        -->
+    </form>
+
+    <script 
+        src="https://kit.fontawesome.com/343146c1ba.js" 
+        crossorigin="anonymous">
+    </script>
+
+</body>
+</html>
