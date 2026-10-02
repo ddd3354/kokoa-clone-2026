@@ -1,0 +1,10 @@
+#friends-display-link { /* 항상 새로운 css만들면 style.css에 import */
+    text-align: center;
+    display: block;
+    background-color: #fafafa;
+    padding: 15px 0px;
+    font-size: 18px;
+}
+#friends-display-link i { /* 아이콘 색상 적용 안되는 원인 찾기*/
+    color: rgba(0, 0, 0, 0.3);
+}

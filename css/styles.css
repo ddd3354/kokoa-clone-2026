@@ -4,9 +4,16 @@
 /* components : 페이지 안에 들어가는 공통 부품(위에 status-bar 등)*/
 @import "components/status-bar.css";
 @import "components/nav-bar.css";
+@import "components/screen-header.css";
 
 /* screens : 특정 화면(페이지) 관련 CSS */
 @import "screens/login.css";
+@import "screens/friends.css";
+
+body {
+    color: #2e363e;
+    /* 네비게이션바 아이콘 기본 색상을 전체 페이지에 적용 */
+}
 
 /*
 @import = 다른 CSS 파일을 현재 CSS 파일에 가져오는 문법

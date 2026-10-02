@@ -26,6 +26,7 @@
 .nav__link {
     position: relative; /* “내 안의 absolute 자식들(이 위치 잡을 때 나를 기준으로 써.”*/
     color: #2e363e;
+    /* 네비게이션바 아이콘들 기본 색상 통일*/
 }
 
 .nav__nottification { /* span이라 inline 요소, width와 height가 적용되지 않음 */
