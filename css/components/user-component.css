@@ -1,0 +1,75 @@
+/* friends.css = Friends 페이지 전용
+user-component.css = 여러 페이지에서 재사용할 프로필 부품 전용 */
+
+.user-component {
+    justify-content: space-between; 
+    /* 왼쪽 column과 오른쪽 column을 양 끝으로 벌리기 위함 */
+}
+
+/*.user-component {
+    display: flex;
+
+-.user-component
+├─ column 1
+└─ column 2
+
+↓ flex
+
+[ column 1 ] [ column 2 ]
+
+- 나눈 이유 
+-> [프로필사진 + 이름]                    [오른쪽 정보]
+     column 1                           column 2
+} */
+
+.user-component,
+.user-component__column:first-child {
+    display: flex;  
+    /* 첫 번째 column을 flex container로 만들어
+       그 안의 img와 text를 가로로 정렬 */
+    align-items: center; /* 세로기준 가운데 정렬 */
+    /* 
+    ┌───────┐
+    │       │
+    │ 사진   │   김치찜
+    │       │
+    └───────┘
+    */
+}
+
+.user-component__avatar { 
+    /* 여러군데에 사용되니 기본값으로 쓸수있게 일단 중간사이즈로 설정*/
+    width: 60px;
+    height: 60px;
+    border-radius: 25px;
+    margin-right: 16px; /* 이미지와 텍스트 사이의 간격 */
+
+}
+
+.user-component__title {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.user-component__subtitle { /* 채팅방에서 쓸 대화내용부분*/
+    margin-top: 8px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6); /* 약간 연한 회색으로 설정 */
+}
+
+.user-component__avatar--xl {
+    width: 70px;
+    height: 70px;
+}
+
+.user-component__avatar--sm {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+
+}
+
+.user-component__title--not-bold {
+    font-weight: 400;
+}
+

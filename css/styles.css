@@ -5,6 +5,7 @@
 @import "components/status-bar.css";
 @import "components/nav-bar.css";
 @import "components/screen-header.css";
+@import "components/user-component.css";
 
 /* screens : 특정 화면(페이지) 관련 CSS */
 @import "screens/login.css";

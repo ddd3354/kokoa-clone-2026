@@ -7,7 +7,7 @@
     <title>Friends - Kokoa Talk</title>
 </head>
 <body>
-    <div class="status-bar">  <!-- 상태 표시줄은 그대로 들고옴 -->
+    <div class="status-bar">  <!-- 상태 표시줄 -->
         <div class="status-bar__column">
             <span>No Service</span>
             <i class="fa-solid fa-wifi"></i>
@@ -37,10 +37,63 @@
 
     </header>
 
-    <a id="friends-display-link" href="#">
+    <a id="friends-display-link" href="#"> <!-- Friends' Names Display 배너 부분 -->
         <i class="fa-solid fa-circle-info"></i>Friends' Names Display
         <i class="fa-solid fa-chevron-right fa-xs"></i>
     </a>
+
+    <main class="friends-screen">
+        <!-- 톡 친구 목록이 표시되는 부분에 있는 내 프필이랑 채널목록을 하나의 box로 관리 -->
+        
+        <div class = "user-component"> <!-- 프필 + 이름 -->
+            <!-- 이 클래스를 반복해서 쓸거임(동일한 부분 많음) -->
+            <div class="user-component__column">
+                <img 
+                src = "img/kimchi.jpg" 
+                class="user-component__avatar user-component__avatar--xl"
+                />
+                <div class="user-component__text">
+                    <h4 class="user-component__title">김치찜</h4>
+                    <!-- <h6 class="user-component__subtitle">김치 개꿀맛</h6> 
+                    ㄴ 나중에 채팅방에 사용예정-->
+                </div>
+            </div>
+            <div class="user-component__column"> 
+                <!-- 오른쪽 정보(여백)-->
+            </div>
+        </div>
+
+        <div class="friends-screen__channel"> <!-- 프필과 채널목록 사이에 연하고 작게 channel 구분 부분 -->
+            <div class="friends-screen__channel-header">
+                <span>Channel</span>
+                <i class="fa-solid fa-chevron-up fa-xs"></i>
+                <!-- ">" 이 아이콘은 채널 섹션을 나타냄 -->
+            </div>
+        </div>
+
+        <div class = "user-component"> <!-- 채널목록 부분 -->
+            <div class="user-component__column">
+                <img 
+                    src = "img/kimchi.jpg" 
+                    class="user-component__avatar user-component__avatar--sm"
+                />
+                <div class="user-component__text">
+                    <h4 class="user-component__title user-component__title--not-bold">Channel</h4>
+                </div>
+            </div>
+
+            <!-- 오른쪽 정보(여백)-->
+            <div class="user-component__column">
+                <span>2</span>
+                <i class="fa-solid fa-chevron-right fa-xs"></i>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    </div>
 
     <nav class="nav"> <!--하단 네비게이션 바 -->
         <ul class="nav__list">

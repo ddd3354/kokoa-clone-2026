@@ -4,7 +4,32 @@
     background-color: #fafafa;
     padding: 15px 0px;
     font-size: 18px;
+    margin-bottom: 10px;
+    /* Friends' Names Display 배너와 프필 사이의 간격 */
 }
-#friends-display-link i { /* 아이콘 색상 적용 안되는 원인 찾기*/
+#friends-display-link svg { /* 아이콘 색상 적용 안되는 원인 찾기*/
     color: rgba(0, 0, 0, 0.3);
 }
+
+.friends-screen {
+    padding: 0px var(--horizontal-space); /* 프필과 채널목록에 공통으로 상하0, 좌우는 기본값줌 */
+}
+
+.friends-screen__channel {
+    margin-top: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2); /* 연한 구분선 */
+    padding-top: 15px; /* 구분선과 채널 목록 사이의 간격 */
+}
+
+.friends-screen__channel-header { 
+    margin-bottom: 25px; /* 채널 헤더와 채널 목록 사이의 간격 */
+    display: flex;
+    justify-content: space-between; /* 왼쪽과 오른쪽 요소를 양 끝으로 배치 */
+    color: rgba(0, 0, 0, 0.5); /* 채널 헤더의 글자 색상 */
+}
+
+.user-component__column:last-child {
+    color: rgba(0, 0, 0, 0.5); /* 오른쪽 정보의 글자 색상 */
+
+}
+
