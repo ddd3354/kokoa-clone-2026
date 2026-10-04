@@ -34,8 +34,8 @@
     </header>
 
         <!--클래스 main-screen? : style.css에 보면 기본 왼쪽 padding이 있음 이 페이지도 있어야함 -->
-        <main class="main-screen"> <!-- 큐알, 연락처, 아이디, 초대 아이콘들 -->
-            <div class="find-icons">
+        <main class="main-screen"> 
+            <div class="find-icons">    <!-- 큐알, 연락처, 아이디, 초대 아이콘들 -->
                 <div class="find-icons__icon">
                     <i class="fa-solid fa-qrcode"></i>
                     <span>QR Code</span>
@@ -54,17 +54,43 @@
                 </div>
             </div>
 
-            <div class="recommended-friends">
+            <div class="recommended-friends"> <!-- 추천 친구 섹션 -->
                 <h6 class="recommended-friends__title">Recommended Friends</h6>
                 <span>You have no recommended friends.</span> <!-- class안주고 .recommended-friends span-->
-                
+            </div>
+
+            <div class="open-chat"> <!-- 오픈 채팅 섹션 -->
+                <div class="open-chat__header"> <!-- 오픈 채팅 헤더 부분 -->
+                    <h4 class="open-chat__title">Open Chat</h4>
+                    <span>Go to OpenChat Home<i class="fa-solid fa-chevron-right fa-xs"></i></span>
+                </div>
+
+                <div class="open-post"> <!-- 오픈 채팅 게시물 부분 -->
+                    <!-- 게시물은 2개의 열로 이루어짐 좌측(1.제목,내용,,) 우측(2.동영상,좋아요,,) -->
+                    <div class="open-post__column"> <!-- 좌측(1.제목,내용,,) -->
+                        <h5 class="open-post__title">#BTS</h5>
+                        <h6 class="open-post__hashtags">#bts#army#friends</h6> <!-- 디자인 때문에 대문자로 보이게 하는 거면 CSS가 담당하는 게 더 깔끔  -->
+                        <div class="open-post__members"> <!-- 오픈 채팅 멤버 정보 -->
+                            <img src="file:///Users/jaeheon/Documents/GitHub/kokoa-clone-2026/img/kimchi.jpg" />
+                            <span class="open-post__member-count">802 members</span>
+                            <div class="divider"></div> <!-- 빈 div가 실제 화면에서 구분선 역할을 함 "|" -->
+                            <span class="open-post__member-status">Active</span>
+                        </div>
+                    </div>
+                    <div class="open-post__column"> <!-- 우측(2.동영상,좋아요,,) -->
+                        <div class="open-post__photo">
+                            <img src="img/kimchi.jpg" />
+                            <div class="open-post__heart-count">
+                                <i class="fa-solid fa-heart fa-xs"></i> <span>999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </main> 
         
-
-
-    </div>
 
     <nav class="nav"> <!--하단 네비게이션 바 -->
         <ul class="nav__list">
@@ -92,6 +118,7 @@
         </ul>
     </nav>
     <!-- nav>ul>li*4>a 치고 엔터 누르면 위와 같은 구조의 틀이 생성됨 -->
+
 
 
     <script 

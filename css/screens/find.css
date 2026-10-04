@@ -11,6 +11,7 @@
 .find-icons {
     display: flex;
     justify-content: space-between;
+
 }
 
 .find-icons__icon {
@@ -25,7 +26,7 @@
     │                    │                  │                    │
     └────────────────────┘                  └────────────────────┘
     ← 왼쪽/오른쪽 사이의 가운데               ← 위/아래 사이의 가운데 */
-
+    margin-bottom: 15px;
 
 }
 
@@ -38,7 +39,7 @@
 }
 
 .recommended-friends {
-    margin: 25px 0px; 
+    margin: 20px 0px; 
     padding: 15px 0px; 
     border-top: var(--main-border);
     border-bottom: var(--main-border);
@@ -54,6 +55,95 @@
     display: block; /* inline 요소를 블록 요소로 설정하여 margin이 적용되도록 함 */
     text-align: center; /* 박스 안에 있는 글자를 좌우 기준 가운데로 정렬 */
     margin: 110px 0px; /* 위아래 간격 */
-    color: var(--light-text-color); /* 연한 글자 색상 */
+    color: var(--light-text-color);
     font-size: 18px;
 }
+
+/* 오픈 채팅 섹션 */
+
+.open-chat__header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--light-text-color);  /* == opacity:0.6; */
+    margin-bottom: 25px; /* 아래쪽 게시물과의 여백 */
+}
+
+.open-post { /* 오픈 채팅 게시물 전체 */
+    display: flex;
+    justify-content: space-between; /* 1번 2번 컬럼을 좌우로 배치 */
+    align-items: center; /* 좌우 컬럼을 세로 기준으로 가운데 정렬 */
+    /* 위 저스티파이 컨텐츠(space-between)와 align-items(center)는 매우매우 자주 쓰이는 조합 */
+}
+
+.open-post__title {
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.open-post__hashtags {
+    text-transform: uppercase; /* 해시태그를 대문자로 표시 */
+    opacity: 0.6; /* 연한 글자 색상 */
+}
+
+.open-post__members {
+    display: flex;
+    align-items: center; /* 가운데 정렬 */
+    margin-top: 7px;
+}
+
+.open-post__members img {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%; /* 원형으로 만들기 */
+    margin-right: 5px; /* 멤버 이미지 간의 간격 */
+}
+
+.open-post__member-count {
+    opacity: 0.6; /* 연한 글자 색상 */
+    font-size: 14px; /* 글자 크기 */
+}
+
+.open-post__members .divider { /* 세로 구분선 */
+    width: 2px; 
+    height: 15px; /* 세로 구분선 높이 */
+    background-color: var(--light-text-color); /* 세로 구분선 색상 */
+    margin: 0 5px; /* 세로 구분선 좌우 간격 */
+}
+
+.open-post__member-status {
+    color: #ffb0e0;
+}
+
+.open-post__photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px; /* 모서리를 둥글게 */
+}
+
+.open-post__photo {
+    position: relative; /* open-post__heart-count의 절대 위치 기준 */
+}
+
+.open-post__heart-count {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    /* 
+    일반 문서 흐름에서 빠져나옴.
+    현재처럼 width / left / right를 따로 지정하지 않으면
+    내용(♥ 999)에 맞게 가로폭이 줄어들어 보임.
+    */
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px; /* 글자 크기 */
+}
+
+.open-post__heart-count span {
+    margin-left: 3px; /* 하트 아이콘과 숫자 사이의 간격 */
+}
+
+
