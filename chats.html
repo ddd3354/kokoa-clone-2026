@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chats - Kokoa Talk</title>
+</head>
+<body>
+    <div class="status-bar">  <!-- 상태 표시줄 -->
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fa-solid fa-wifi"></i>
+        </div>
+
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+
+        <div class="status-bar__column">
+            <span>110%</span>
+            <i class="fa-solid fa-battery-full"></i>
+            <i class="fa-solid fa-bolt"></i>
+        </div>
+    </div>
+
+    <header class="screen-header">  <!-- 화면 상단 아이콘들 -->
+        <h1 class="screen-header__title">Chats</h1>
+        <div class="screen-header__icons">
+            
+            <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
+            <span><i class="fa-regular fa-comment-dots fa-lg"></i></span>
+            <span><i class="fa-solid fa-music fa-lg"></i></span>
+            <span><i class="fa-solid fa-gear fa-lg"></i></span>
+
+
+        </div>
+
+    </header>
+
+    <main class="main-screen">
+        <!-- 톡 친구 목록이 표시되는 부분에 있는 내 프필이랑 채널목록을 하나의 box로 관리 -->
+        
+        <div class = "user-component"> <!-- 프필 + 이름 -->
+            <!-- 이 클래스를 반복해서 쓸거임(동일한 부분 많음) -->
+            <div class="user-component__column">
+                <img 
+                src = "img/kimchi.jpg" 
+                class="user-component__avatar user-component__avatar"
+                />
+                <div class="user-component__text">
+                    <h4 class="user-component__title">김치찜</h4>
+                    <h6 class="user-component__subtitle">김치 개꿀맛</h6> 
+
+                </div>
+            </div>
+            <div class="user-component__column">
+                <span class="user-component__time">21:22</span>
+                <div class="badge">1</div>
+                <!-- div = 박스 만들기, span = 글자 조각 감싸기 -->
+            </div>
+        </div>
+
+
+    </main>
+
+
+    </div>
+
+    <nav class="nav"> <!--하단 네비게이션 바 -->
+        <ul class="nav__list">
+            <li class="nav__btn">
+                <a class="nav__link" href="friends.html">
+                <i class="fa-regular fa-user fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="chats.html">
+                    <span class="nav__nottification badge">1</span> 
+                    <!-- 새로 만든 뱃지클래스 추가하여 알림 숫자를 표시함 -->
+                    <i class="fa-solid fa-comment fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="find.html"><i class="fa-solid fa-magnifying-glass fa-2x"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="more.html">
+                    <span class="nav__dot">•</span>
+                    <i class="fa-solid fa-ellipsis fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- nav>ul>li*4>a 치고 엔터 누르면 위와 같은 구조의 틀이 생성됨 -->
+
+
+    <script 
+        src="https://kit.fontawesome.com/343146c1ba.js" 
+        crossorigin="anonymous">
+    </script>
+
+</body>
+</html>
+

@@ -84,8 +84,13 @@
 
             <!-- 오른쪽 정보(여백)-->
             <div class="user-component__column">
-                <span>2</span>
-                <i class="fa-solid fa-chevron-right fa-xs"></i>
+                <div>
+                    <span>2</span>
+                    <i class="fa-solid fa-chevron-right fa-xs"></i>
+                    <!-- 바깥 column은 세로 정렬용, 안쪽 div는 2 >를 한 덩어리로 묶어서 가로 유지용 -->
+                     <!-- flex-direction: column은 자식이 여러 개일 때 의미가 크게 보임. 지금처럼
+                        자식이 div 하나면 그 div 하나만 배치하니까 눈에 띄는 변화가 없음.*/ -->
+                </div>
             </div>
         </div>
 
@@ -103,16 +108,18 @@
                 </a>
             </li>
             <li class="nav__btn">
-                <a class="nav__link" href="#">
-                    <span class="nav__nottification">1</span>
+                <a class="nav__link" href="chats.html">
+                    <span class="nav__nottification badge">1</span>
+                    <!-- 해당 요소는 nav__nottification(포지션&위치조정)과 
+                     badge 클래스(빨간 동그라미 스타일)를 함께 사용하여 알림 뱃지를 표시함 -->
                     <i class="fa-regular fa-comment fa-2x"></i>
                 </a>
             </li>
             <li class="nav__btn">
-                <a class="nav__link" href="#"><i class="fa-solid fa-magnifying-glass fa-2x"></i></a>
+                <a class="nav__link" href="find.html"><i class="fa-solid fa-magnifying-glass fa-2x"></i></a>
             </li>
             <li class="nav__btn">
-                <a class="nav__link" href="#">
+                <a class="nav__link" href="more.html">
                     <span class="nav__dot">•</span>
                     <i class="fa-solid fa-ellipsis fa-2x"></i>
                 </a>
@@ -120,9 +127,6 @@
         </ul>
     </nav>
     <!-- nav>ul>li*4>a 치고 엔터 누르면 위와 같은 구조의 틀이 생성됨 -->
-
-
-
 
 
     <script 

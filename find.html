@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find - Kokoa Talk</title>
+</head>
+<body>
+    <div class="status-bar">  <!-- 상태 표시줄 -->
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fa-solid fa-wifi"></i>
+        </div>
+
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+
+        <div class="status-bar__column">
+            <span>110%</span>
+            <i class="fa-solid fa-battery-full"></i>
+            <i class="fa-solid fa-bolt"></i>
+        </div>
+    </div>
+
+    <header class="screen-header">  <!-- 화면 상단 아이콘들 -->
+        <h1 class="screen-header__title">Find</h1>
+        <div class="screen-header__icons">
+            <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
+            <span><i class="fa-solid fa-gear fa-lg"></i></span>
+            <span class="nav__dot">•</span>
+        </div>
+    </header>
+
+        <!--클래스 main-screen? : style.css에 보면 기본 왼쪽 padding이 있음 이 페이지도 있어야함 -->
+        <main class="main-screen"> <!-- 큐알, 연락처, 아이디, 초대 아이콘들 -->
+            <div class="find-icons">
+                <div class="find-icons__icon">
+                    <i class="fa-solid fa-qrcode"></i>
+                    <span>QR Code</span>
+                </div>
+                <div class="find-icons__icon">
+                    <i class="fa-regular fa-address-book"></i>
+                    <span>Add by Contacts</span>
+                </div>
+                <div class="find-icons__icon">
+                    <i class="fa-solid fa-fingerprint"></i>
+                    <span>Add by ID</span>
+                </div>
+                <div class="find-icons__icon">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Invite</span>
+                </div>
+            </div>
+
+            <div class="recommended-friends">
+                <h6 class="recommended-friends__title">Recommended Friends</h6>
+                <span>You have no recommended friends.</span> <!-- class안주고 .recommended-friends span-->
+                
+            </div>
+
+        </main> 
+        
+
+
+    </div>
+
+    <nav class="nav"> <!--하단 네비게이션 바 -->
+        <ul class="nav__list">
+            <li class="nav__btn">
+                <a class="nav__link" href="friends.html">
+                <i class="fa-regular fa-user fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="chats.html">
+                    <span class="nav__nottification badge">1</span> 
+                    <!-- 새로 만든 뱃지클래스 추가하여 알림 숫자를 표시함 -->
+                    <i class="fa-regular fa-comment fa-2x"></i>
+                </a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="find.html"><i class="fa-solid fa-magnifying-glass fa-2x"></i></a>
+            </li>
+            <li class="nav__btn">
+                <a class="nav__link" href="more.html">
+                    <span class="nav__dot">•</span>
+                    <i class="fa-solid fa-ellipsis fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- nav>ul>li*4>a 치고 엔터 누르면 위와 같은 구조의 틀이 생성됨 -->
+
+
+    <script 
+        src="https://kit.fontawesome.com/343146c1ba.js" 
+        crossorigin="anonymous">
+    </script>
+
+</body>
+</html>
+

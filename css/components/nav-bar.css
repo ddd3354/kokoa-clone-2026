@@ -30,15 +30,7 @@
 }
 
 .nav__nottification { /* span이라 inline 요소, width와 height가 적용되지 않음 */
-    background-color: tomato;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* 세로 중앙 정렬 */
-    color: white;
-    font-weight: 600;
+    /* 컴포넌츠에 뱃지 css에 빨간 동그라미 1 아이콘 저장함 */
     position: absolute;
     /* 가장 가까운 relative를 가진 부모 기준으로 움직임
     ㄴ말풍선 .nav__link가 부모 기준으로 위치함 
@@ -48,12 +40,9 @@
 }
 
 .nav__dot {
-    color: tomato;
     position: absolute;
     /* 점 3개 링크를 기준 */
-    display: flex;
     right: -4px;
-    font-size: 20px;
     top: -18px;
 
     /* 

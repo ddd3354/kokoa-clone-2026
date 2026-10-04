@@ -1,0 +1,59 @@
+.screen-header__icons {
+    position: relative;
+}
+
+.nav__dot {
+    position: absolute;
+    top: -15px;
+    right: -5px;
+}
+
+.find-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.find-icons__icon {
+    display: flex;
+    flex-direction: column;
+    /*주축(main axis) = 세로(Y축) ↓,  교차축(cross axis) = 가로(X축) →*/
+    align-items: center;  /* 교차축(cross axis) 기준 중앙 정렬 */
+    /* 가로 가운데 정렬                          세로 가운데 정렬
+    ┌────────────────────┐                  ┌────────────────────┐
+    │        🔍          │                  │                    │
+    │      QR Code       │                  │        🔍          │
+    │                    │                  │                    │
+    └────────────────────┘                  └────────────────────┘
+    ← 왼쪽/오른쪽 사이의 가운데               ← 위/아래 사이의 가운데 */
+
+
+}
+
+.find-icons__icon svg {
+    font-size: 35px;
+}
+
+.find-icons__icon span { /* 아이콘 아래 텍스트에 마진 탑으로 공간 확보 */
+    margin-top: 18px;
+}
+
+.recommended-friends {
+    margin: 25px 0px; 
+    padding: 15px 0px; 
+    border-top: var(--main-border);
+    border-bottom: var(--main-border);
+
+}
+
+.recommended-friends__title {
+    font-size: 14px;
+    color: var(--light-text-color); /* 연한 글자 색상 */
+}
+
+.recommended-friends span {
+    display: block; /* inline 요소를 블록 요소로 설정하여 margin이 적용되도록 함 */
+    text-align: center; /* 박스 안에 있는 글자를 좌우 기준 가운데로 정렬 */
+    margin: 110px 0px; /* 위아래 간격 */
+    color: var(--light-text-color); /* 연한 글자 색상 */
+    font-size: 18px;
+}

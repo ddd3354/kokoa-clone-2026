@@ -2,6 +2,12 @@
     --yellow: #fae100;
     /* --yellow 이라는 변수에
         #fae100 색상을 저장해둠 */
+
     --horizontal-space: 25px; 
     /* 카톡창 왼쪽 기본 공백부분 픽셀값(screen-header)*/
+
+    --main-border: 1px solid rgba(0, 0, 0, 0.2);
+
+    --light-text-color: rgba(0, 0, 0, 0.5); /* 연한 글자 색상 */
+
 }
