@@ -8,35 +8,6 @@
     right: -5px;
 }
 
-.find-icons {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.find-icons__icon {
-    display: flex;
-    flex-direction: column;
-    /*주축(main axis) = 세로(Y축) ↓,  교차축(cross axis) = 가로(X축) →*/
-    align-items: center;  /* 교차축(cross axis) 기준 중앙 정렬 */
-    /* 가로 가운데 정렬                          세로 가운데 정렬
-    ┌────────────────────┐                  ┌────────────────────┐
-    │        🔍          │                  │                    │
-    │      QR Code       │                  │        🔍          │
-    │                    │                  │                    │
-    └────────────────────┘                  └────────────────────┘
-    ← 왼쪽/오른쪽 사이의 가운데               ← 위/아래 사이의 가운데 */
-    margin-bottom: 15px;
-
-}
-
-.find-icons__icon svg {
-    font-size: 35px;
-}
-
-.find-icons__icon span { /* 아이콘 아래 텍스트에 마진 탑으로 공간 확보 */
-    margin-top: 18px;
-}
 
 .recommended-friends {
     margin: 20px 0px; 

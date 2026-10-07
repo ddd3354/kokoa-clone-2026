@@ -8,11 +8,16 @@
 @import "components/user-component.css";
 @import "components/badge.css";
 @import "components/dots.css";
+@import "components/icon-row.css";
+@import "components/alt-screen-header.css";
 
 /* screens : 특정 화면(페이지) 관련 CSS */
 @import "screens/login.css";
 @import "screens/friends.css";
 @import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chatroom.css";
 
 
 body {
