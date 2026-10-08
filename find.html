@@ -1,131 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="css/styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Find - Kokoa Talk</title>
-</head>
-<body>
-    <div class="status-bar">  <!-- 상태 표시줄 -->
-        <div class="status-bar__column">
-            <span>No Service</span>
-            <i class="fa-solid fa-wifi"></i>
-        </div>
+  </head>
+  <body>
+    <div class="status-bar">
+      <!-- 상태 표시줄 -->
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
 
-        <div class="status-bar__column">
-            <span>18:43</span>
-        </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
 
-        <div class="status-bar__column">
-            <span>110%</span>
-            <i class="fa-solid fa-battery-full"></i>
-            <i class="fa-solid fa-bolt"></i>
-        </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <i class="fa-solid fa-battery-full"></i>
+        <i class="fa-solid fa-bolt"></i>
+      </div>
     </div>
 
-    <header class="screen-header">  <!-- 화면 상단 아이콘들 -->
-        <h1 class="screen-header__title">Find</h1>
-        <div class="screen-header__icons">
-            <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
-            <span><i class="fa-solid fa-gear fa-lg"></i></span>
-            <span class="nav__dot">•</span>
-        </div>
+    <header class="screen-header">
+      <!-- 화면 상단 아이콘들 -->
+      <h1 class="screen-header__title">Find</h1>
+      <div class="screen-header__icons">
+        <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
+        <span><i class="fa-solid fa-gear fa-lg"></i></span>
+        <span class="nav__dot">•</span>
+      </div>
     </header>
 
-        <!--클래스 main-screen? : style.css에 보면 기본 왼쪽 padding이 있음 이 페이지도 있어야함 -->
-        <main class="main-screen"> 
-            <div class="icon-row">    <!-- 큐알, 연락처, 아이디, 초대 아이콘들 -->
-                <div class="icon-row__icon">
-                    <i class="fa-solid fa-qrcode"></i>
-                    <span>QR Code</span>
-                </div>
-                <div class="icon-row__icon">
-                    <i class="fa-regular fa-address-book"></i>
-                    <span>Add by Contacts</span>
-                </div>
-                <div class="icon-row__icon">
-                    <i class="fa-solid fa-fingerprint"></i>
-                    <span>Add by ID</span>
-                </div>
-                <div class="icon-row__icon">
-                    <i class="fa-regular fa-envelope"></i>
-                    <span>Invite</span>
-                </div>
+    <!--클래스 main-screen? : style.css에 보면 기본 왼쪽 padding이 있음 이 페이지도 있어야함 -->
+    <main class="main-screen">
+      <div class="icon-row">
+        <!-- 큐알, 연락처, 아이디, 초대 아이콘들 -->
+        <div class="icon-row__icon">
+          <i class="fa-solid fa-qrcode"></i>
+          <span>QR Code</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="fa-regular fa-address-book"></i>
+          <span>Add by Contacts</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="fa-solid fa-fingerprint"></i>
+          <span>Add by ID</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="fa-regular fa-envelope"></i>
+          <span>Invite</span>
+        </div>
+      </div>
+
+      <div class="recommended-friends">
+        <!-- 추천 친구 섹션 -->
+        <h6 class="recommended-friends__title">Recommended Friends</h6>
+        <span>You have no recommended friends.</span>
+        <!-- class안주고 .recommended-friends span-->
+      </div>
+
+      <div class="open-chat">
+        <!-- 오픈 채팅 섹션 -->
+        <div class="open-chat__header">
+          <!-- 오픈 채팅 헤더 부분 -->
+          <h4 class="open-chat__title">Open Chat</h4>
+          <span
+            >Go to OpenChat Home<i class="fa-solid fa-chevron-right fa-xs"></i
+          ></span>
+        </div>
+
+        <div class="open-post">
+          <!-- 오픈 채팅 게시물 부분 -->
+          <!-- 게시물은 2개의 열로 이루어짐 좌측(1.제목,내용,,) 우측(2.동영상,좋아요,,) -->
+          <div class="open-post__column">
+            <!-- 좌측(1.제목,내용,,) -->
+            <h5 class="open-post__title">#BTS</h5>
+            <h6 class="open-post__hashtags">#bts#army#friends</h6>
+            <!-- 디자인 때문에 대문자로 보이게 하는 거면 CSS가 담당하는 게 더 깔끔  -->
+            <div class="open-post__members">
+              <!-- 오픈 채팅 멤버 정보 -->
+              <img
+                src="file:///Users/jaeheon/Documents/GitHub/kokoa-clone-2026/img/kimchi.jpg"
+              />
+              <span class="open-post__member-count">802 members</span>
+              <div class="divider"></div>
+              <!-- 빈 div가 실제 화면에서 구분선 역할을 함 "|" -->
+              <span class="open-post__member-status">Active</span>
             </div>
-
-            <div class="recommended-friends"> <!-- 추천 친구 섹션 -->
-                <h6 class="recommended-friends__title">Recommended Friends</h6>
-                <span>You have no recommended friends.</span> <!-- class안주고 .recommended-friends span-->
+          </div>
+          <div class="open-post__column">
+            <!-- 우측(2.동영상,좋아요,,) -->
+            <div class="open-post__photo">
+              <img src="img/kimchi.jpg" />
+              <div class="open-post__heart-count">
+                <i class="fa-solid fa-heart fa-xs"></i> <span>999</span>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-            <div class="open-chat"> <!-- 오픈 채팅 섹션 -->
-                <div class="open-chat__header"> <!-- 오픈 채팅 헤더 부분 -->
-                    <h4 class="open-chat__title">Open Chat</h4>
-                    <span>Go to OpenChat Home<i class="fa-solid fa-chevron-right fa-xs"></i></span>
-                </div>
-
-                <div class="open-post"> <!-- 오픈 채팅 게시물 부분 -->
-                    <!-- 게시물은 2개의 열로 이루어짐 좌측(1.제목,내용,,) 우측(2.동영상,좋아요,,) -->
-                    <div class="open-post__column"> <!-- 좌측(1.제목,내용,,) -->
-                        <h5 class="open-post__title">#BTS</h5>
-                        <h6 class="open-post__hashtags">#bts#army#friends</h6> <!-- 디자인 때문에 대문자로 보이게 하는 거면 CSS가 담당하는 게 더 깔끔  -->
-                        <div class="open-post__members"> <!-- 오픈 채팅 멤버 정보 -->
-                            <img src="file:///Users/jaeheon/Documents/GitHub/kokoa-clone-2026/img/kimchi.jpg" />
-                            <span class="open-post__member-count">802 members</span>
-                            <div class="divider"></div> <!-- 빈 div가 실제 화면에서 구분선 역할을 함 "|" -->
-                            <span class="open-post__member-status">Active</span>
-                        </div>
-                    </div>
-                    <div class="open-post__column"> <!-- 우측(2.동영상,좋아요,,) -->
-                        <div class="open-post__photo">
-                            <img src="img/kimchi.jpg" />
-                            <div class="open-post__heart-count">
-                                <i class="fa-solid fa-heart fa-xs"></i> <span>999</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </main> 
-        
-
-    <nav class="nav"> <!--하단 네비게이션 바 -->
-        <ul class="nav__list">
-            <li class="nav__btn">
-                <a class="nav__link" href="friends.html">
-                <i class="fa-regular fa-user fa-2x"></i>
-                </a>
-            </li>
-            <li class="nav__btn">
-                <a class="nav__link" href="chats.html">
-                    <span class="nav__nottification badge">1</span> 
-                    <!-- 새로 만든 뱃지클래스 추가하여 알림 숫자를 표시함 -->
-                    <i class="fa-regular fa-comment fa-2x"></i>
-                </a>
-            </li>
-            <li class="nav__btn">
-                <a class="nav__link" href="find.html"><i class="fa-solid fa-magnifying-glass fa-2x"></i></a>
-            </li>
-            <li class="nav__btn">
-                <a class="nav__link" href="more.html">
-                    <span class="nav__dot">•</span>
-                    <i class="fa-solid fa-ellipsis fa-2x"></i>
-                </a>
-            </li>
-        </ul>
+    <nav class="nav">
+      <!--하단 네비게이션 바 -->
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html">
+            <i class="fa-regular fa-user fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav__nottification badge">1</span>
+            <!-- 새로 만든 뱃지클래스 추가하여 알림 숫자를 표시함 -->
+            <i class="fa-regular fa-comment fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html"
+            ><i class="fa-solid fa-magnifying-glass fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html">
+            <span class="nav__dot">•</span>
+            <i class="fa-solid fa-ellipsis fa-2x"></i>
+          </a>
+        </li>
+      </ul>
     </nav>
     <!-- nav>ul>li*4>a 치고 엔터 누르면 위와 같은 구조의 틀이 생성됨 -->
 
-
-
-    <script 
-        src="https://kit.fontawesome.com/343146c1ba.js" 
-        crossorigin="anonymous">
-    </script>
-
-</body>
+    <script
+      src="https://kit.fontawesome.com/343146c1ba.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
-
