@@ -1,5 +1,5 @@
 
-#status-bar {
+.status-bar {
     position: fixed;
     top: 0; /* 화면 상단에 고정 */
     width: 100%; /* 화면 상단에 고정될 때 전체 너비 차지 */
