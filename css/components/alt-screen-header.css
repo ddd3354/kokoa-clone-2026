@@ -1,7 +1,7 @@
 .alt-header {
   display: flex; /* 3개의 column을 가로로 배치 */
   align-items: center; /* 헤더 안 요소들을 세로 기준 가운데 정렬 */
-  margin: 0px 15px 30px; /*위 0 / 좌우 15 / 아래 30*/
+  margin: 50px 15px 30px; /*위 0 / 좌우 15 / 아래 30*/
 }
 
 .alt-header__title {

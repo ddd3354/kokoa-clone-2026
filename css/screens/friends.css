@@ -34,3 +34,38 @@
 
 }
 
+@keyframes hideSplashScreen {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+#splash-screen {
+    background-color: var(--yellow);
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+
+    animation: hideSplashScreen 0.3s ease-in-out forwards;
+    /* forwards는 애니메이션이 끝나도 마지막 상태를 유지하라는 뜻 
+    ㄴ 하지만 해당 element는 남아있음 그래서 아래 채팅방을 클릭 안됨
+    to {
+        opacity: 0.1; -> 이러면 뭔말인지 앎
+    }
+    */
+    animation-delay: 1s;
+
+}
+
+
+

@@ -45,7 +45,46 @@
     <!-- 채팅방 날짜와 시간부분 -->
     <main class="main-screen main-chatroom">
       <div class="chat__timestamp">Tuesday, June 30, 2020</div>
+
+      <div class="message-row">
+        <img src="img/kimchi.jpg" />
+        <div class="message-row__content">
+          <span class="message__author">김치찜</span>
+          <div class="message__info">
+            <span class="message__bubble">김치찜 시키셨죠?</span>
+            <span class="message__time">03:30</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">아뇨 안시켰는데요</span>
+            <span class="message__time">03:30</span>
+          </div>
+        </div>
+      </div>
     </main>
+
+    <!-- 아래 키보드 -->
+    <form class="reply">
+      <div class="reply__column">
+        <i class="fa-solid fa-cart-plus fa-lg"></i>
+      </div>
+
+      <div class="reply__column">
+        <input type="text" placeholder="Write a message.." />
+        <i class="fa-regular fa-face-smile fa-lg"></i>
+        <button>
+          <i class="fa-solid fa-circle-arrow-up"></i>
+        </button>
+      </div>
+    </form>
+
+    <div id="no-mobile">
+      <span>Your screen is too big!</span>
+    </div>
 
     <script
       src="https://kit.fontawesome.com/343146c1ba.js"

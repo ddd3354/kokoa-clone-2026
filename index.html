@@ -10,16 +10,16 @@
  2. Ctrl + S: 저장 
  -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to Kokoa Talk</title>
-</head>
-<body>
-    <div id="status-bar"> 
-        <!-- 상태 표시줄 : 총 3개의 열(column)을 가짐
+  </head>
+  <body>
+    <div id="status-bar">
+      <!-- 상태 표시줄 : 총 3개의 열(column)을 가짐
          클래스 이름을 아래처럼 길게 짓는 이유는 그냥 cloumn이라 지으면
          다른 곳에서 충돌할 수 있기 때문입니다. 이걸 BEM(Block Element Modifier) 방식이라고 합니다.
 
@@ -32,38 +32,41 @@
         예: `status-bar__column`, `button--danger`
         -->
 
-        <div class="status-bar__column">
-            <span>No Service</span>
-            <!-- 할일(To Do) : Wifi icon 
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <!-- 할일(To Do) : Wifi icon 
              hero icon에서 복사해서 쓰면됨 -->
-             <!--
+        <!--
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 0 1 7.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 0 1 1.06 0Z" />
             </svg> 
              -->
-            <!-- svg는 픽셀이 아닌 path로 좌표 되어있는 이미지 -->
-            <i class="fa-solid fa-wifi"></i>
-        </div>
+        <!-- svg는 픽셀이 아닌 path로 좌표 되어있는 이미지 -->
+        <i class="fa-solid fa-wifi"></i>
+      </div>
 
-        <div class="status-bar__column">
-            <span>18:43</span>
-        </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
 
-        <div class="status-bar__column">
-            <span>110%</span>
-            <!-- 할일(To Do) : Battery icon -->
-            <!-- 할일(To Do) : Lightning(충전) icon 추가 -->
-            <i class="fa-solid fa-battery-full"></i>
-            <i class="fa-solid fa-bolt"></i>
-        </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <!-- 할일(To Do) : Battery icon -->
+        <!-- 할일(To Do) : Lightning(충전) icon 추가 -->
+        <i class="fa-solid fa-battery-full"></i>
+        <i class="fa-solid fa-bolt"></i>
+      </div>
     </div>
-    <script 
-        src="https://kit.fontawesome.com/343146c1ba.js" 
-        crossorigin="anonymous">
 
-    </script>
+    <div id="no-mobile">
+      <span>Your screen is too big!</span>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/343146c1ba.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Font Awesome 아이콘 사용을 위한 스크립트
      ㄴ 스크립트는 항상 body 태그를 닫기 직전 마지막에 있어야함 -->
-
-</body>
+  </body>
 </html>

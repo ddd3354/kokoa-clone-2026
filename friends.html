@@ -1,138 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="css/styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Friends - Kokoa Talk</title>
-</head>
-<body>
-    <div class="status-bar">  <!-- 상태 표시줄 -->
-        <div class="status-bar__column">
-            <span>No Service</span>
-            <i class="fa-solid fa-wifi"></i>
-        </div>
+  </head>
+  <body>
+    <div class="status-bar">
+      <!-- 상태 표시줄 -->
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
 
-        <div class="status-bar__column">
-            <span>18:43</span>
-        </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
 
-        <div class="status-bar__column">
-            <span>110%</span>
-            <i class="fa-solid fa-battery-full"></i>
-            <i class="fa-solid fa-bolt"></i>
-        </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <i class="fa-solid fa-battery-full"></i>
+        <i class="fa-solid fa-bolt"></i>
+      </div>
     </div>
 
-    <header class="screen-header">  <!-- 화면 상단 아이콘들 -->
-        <h1 class="screen-header__title">Friends</h1>
-        <div class="screen-header__icons">
-            
-            <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
-            <span><i class="fa-solid fa-music fa-lg"></i></span>
-            <span><i class="fa-solid fa-gear fa-lg"></i></span>
-
-
-        </div>
-
+    <header class="screen-header">
+      <!-- 화면 상단 아이콘들 -->
+      <h1 class="screen-header__title">Friends</h1>
+      <div class="screen-header__icons">
+        <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
+        <span><i class="fa-solid fa-music fa-lg"></i></span>
+        <span><i class="fa-solid fa-gear fa-lg"></i></span>
+      </div>
     </header>
 
-    <a id="friends-display-link" href="#"> <!-- Friends' Names Display 배너 부분 -->
-        <i class="fa-solid fa-circle-info"></i>Friends' Names Display
-        <i class="fa-solid fa-chevron-right fa-xs"></i>
+    <a id="friends-display-link" href="#">
+      <!-- Friends' Names Display 배너 부분 -->
+      <i class="fa-solid fa-circle-info"></i>Friends' Names Display
+      <i class="fa-solid fa-chevron-right fa-xs"></i>
     </a>
 
+    <!-- 톡 친구 목록이 표시되는 부분에 있는 내 프필이랑
+      채널목록을 하나의 box로 관리 -->
     <main class="friends-screen">
-        <!-- 톡 친구 목록이 표시되는 부분에 있는 내 프필이랑 채널목록을 하나의 box로 관리 -->
-        
-        <div class = "user-component"> <!-- 프필 + 이름 -->
-            <!-- 이 클래스를 반복해서 쓸거임(동일한 부분 많음) -->
-            <div class="user-component__column">
-                <img 
-                src = "img/kimchi.jpg" 
-                class="user-component__avatar user-component__avatar--xl"
-                />
-                <div class="user-component__text">
-                    <h4 class="user-component__title">김치찜</h4>
-                    <!-- <h6 class="user-component__subtitle">김치 개꿀맛</h6> 
+      <div class="user-component">
+        <!-- 프필 + 이름 -->
+        <!-- 이 클래스를 반복해서 쓸거임(동일한 부분 많음) -->
+        <div class="user-component__column">
+          <img
+            src="img/kimchi.jpg"
+            class="user-component__avatar user-component__avatar--xl"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title">김치찜</h4>
+            <!-- <h6 class="user-component__subtitle">김치 개꿀맛</h6> 
                     ㄴ 나중에 채팅방에 사용예정-->
-                </div>
-            </div>
-            <div class="user-component__column"> 
-                <!-- 오른쪽 정보(여백)-->
-            </div>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <!-- 오른쪽 정보(여백)-->
+        </div>
+      </div>
+
+      <div class="friends-screen__channel">
+        <!-- 프필과 채널목록 사이에 연하고 작게 channel 구분 부분 -->
+        <div class="friends-screen__channel-header">
+          <span>Channel</span>
+          <i class="fa-solid fa-chevron-up fa-xs"></i>
+          <!-- ">" 이 아이콘은 채널 섹션을 나타냄 -->
+        </div>
+      </div>
+
+      <div class="user-component">
+        <!-- 채널목록 부분 -->
+        <div class="user-component__column">
+          <img
+            src="img/kimchi.jpg"
+            class="user-component__avatar user-component__avatar--sm"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title user-component__title--not-bold">
+              Channel
+            </h4>
+          </div>
         </div>
 
-        <div class="friends-screen__channel"> <!-- 프필과 채널목록 사이에 연하고 작게 channel 구분 부분 -->
-            <div class="friends-screen__channel-header">
-                <span>Channel</span>
-                <i class="fa-solid fa-chevron-up fa-xs"></i>
-                <!-- ">" 이 아이콘은 채널 섹션을 나타냄 -->
-            </div>
-        </div>
-
-        <div class = "user-component"> <!-- 채널목록 부분 -->
-            <div class="user-component__column">
-                <img 
-                    src = "img/kimchi.jpg" 
-                    class="user-component__avatar user-component__avatar--sm"
-                />
-                <div class="user-component__text">
-                    <h4 class="user-component__title user-component__title--not-bold">Channel</h4>
-                </div>
-            </div>
-
-            <!-- 오른쪽 정보(여백)-->
-            <div class="user-component__column">
-                <div>
-                    <span>2</span>
-                    <i class="fa-solid fa-chevron-right fa-xs"></i>
-                    <!-- 바깥 column은 세로 정렬용, 안쪽 div는 2 >를 한 덩어리로 묶어서 가로 유지용 -->
-                     <!-- flex-direction: column은 자식이 여러 개일 때 의미가 크게 보임. 지금처럼
+        <!-- 오른쪽 정보(여백)-->
+        <div class="user-component__column">
+          <div>
+            <span>2</span>
+            <i class="fa-solid fa-chevron-right fa-xs"></i>
+            <!-- 바깥 column은 세로 정렬용, 안쪽 div는 2 >를 한 덩어리로 묶어서 가로 유지용 -->
+            <!-- flex-direction: column은 자식이 여러 개일 때 의미가 크게 보임. 지금처럼
                         자식이 div 하나면 그 div 하나만 배치하니까 눈에 띄는 변화가 없음.*/ -->
-                </div>
-            </div>
+          </div>
         </div>
-
-
+      </div>
     </main>
 
-
-    </div>
-
-    <nav class="nav"> <!--하단 네비게이션 바 -->
-        <ul class="nav__list">
-            <li class="nav__btn">
-                <a class="nav__link" href="friends.html">
-                    <i class="fa-solid fa-user fa-2x"></i>
-                </a>
-            </li>
-            <li class="nav__btn">
-                <a class="nav__link" href="chats.html">
-                    <span class="nav__nottification badge">1</span>
-                    <!-- 해당 요소는 nav__nottification(포지션&위치조정)과 
+    <!--하단 네비게이션 바 -->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html">
+            <i class="fa-solid fa-user fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav__nottification badge">1</span>
+            <!-- 해당 요소는 nav__nottification(포지션&위치조정)과 
                      badge 클래스(빨간 동그라미 스타일)를 함께 사용하여 알림 뱃지를 표시함 -->
-                    <i class="fa-regular fa-comment fa-2x"></i>
-                </a>
-            </li>
-            <li class="nav__btn">
-                <a class="nav__link" href="find.html"><i class="fa-solid fa-magnifying-glass fa-2x"></i></a>
-            </li>
-            <li class="nav__btn">
-                <a class="nav__link" href="more.html">
-                    <span class="nav__dot">•</span>
-                    <i class="fa-solid fa-ellipsis fa-2x"></i>
-                </a>
-            </li>
-        </ul>
+            <i class="fa-regular fa-comment fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html"
+            ><i class="fa-solid fa-magnifying-glass fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html">
+            <span class="nav__dot">•</span>
+            <i class="fa-solid fa-ellipsis fa-2x"></i>
+          </a>
+        </li>
+      </ul>
     </nav>
     <!-- nav>ul>li*4>a 치고 엔터 누르면 위와 같은 구조의 틀이 생성됨 -->
 
+    <!-- 새로고침시 해당 화면 나오게 -->
+    <div id="splash-screen">
+      <i class="fa-solid fa-comment fa-2x"></i>
+    </div>
 
-    <script 
-        src="https://kit.fontawesome.com/343146c1ba.js" 
-        crossorigin="anonymous">
-    </script>
+    <div id="no-mobile">
+      <span>Your screen is too big!</span>
+    </div>
 
-</body>
+    <script
+      src="https://kit.fontawesome.com/343146c1ba.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

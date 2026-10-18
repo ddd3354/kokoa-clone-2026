@@ -29,16 +29,6 @@
     /* 네비게이션바 아이콘들 기본 색상 통일*/
 }
 
-.nav__nottification { /* span이라 inline 요소, width와 height가 적용되지 않음 */
-    /* 컴포넌츠에 뱃지 css에 빨간 동그라미 1 아이콘 저장함 */
-    position: absolute;
-    /* 가장 가까운 relative를 가진 부모 기준으로 움직임
-    ㄴ말풍선 .nav__link가 부모 기준으로 위치함 
-    ㄴ 그래서 얘한테 position: relative를 줘야 함 */
-    left: 15px;
-    bottom: 15px;
-}
-
 .nav__dot {
     position: absolute;
     /* 점 3개 링크를 기준 */
@@ -59,3 +49,66 @@
           right: 0 */
 
 }
+
+@keyframes nottificationAnimation {
+    0%{
+        transform: none;
+    }
+    50%{
+        transform: translateY(-5px) rotateY(180deg);
+    }
+    100%{
+        transform: none;
+    }
+
+}
+
+.nav__nottification { /* span이라 inline 요소, width와 height가 적용되지 않음 */
+    /* 컴포넌츠에 뱃지 css에 빨간 동그라미 1 아이콘 저장함 */
+    position: absolute;
+    /* 가장 가까운 relative를 가진 부모 기준으로 움직임
+    ㄴ말풍선 .nav__link가 부모 기준으로 위치함 
+    ㄴ 그래서 얘한테 position: relative를 줘야 함 */
+    left: 15px;
+    bottom: 15px;
+    animation: nottificationAnimation 2s ease-in-out infinite;
+
+}
+
+@keyframes appearBtnAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.nav__btn {
+    transform: translateY(50px);
+    opacity: 0;
+    animation: appearBtnAnimation 0.5s ease-in-out forwards;
+}
+
+.nav__btn:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.nav__btn:nth-child(3) {
+    animation-delay: 0.4s;
+
+}
+.nav__btn:last-child {
+    animation-delay: 0.6s;
+
+}
+
+/*딜레이가 있다는 것은 마지막 자식은 0.6초동안 애니메이션이 없다는 뜻
+그건 0.6초 동안 마지막 자식이 화면 아래에 있지 않다는 의미(transform: translateY(50px);)
+그래서 transform과 opacity를 from에 안주고네브 버튼에 줘서 모든 딜레이를 가진 아이콘들이
+애니메가 작동 되기전부터 opacity 0을 갖고 아래에 위치하게 세팅하여 아래에서 위로 올라오는 듯한
+연출이 가능해짐
+
+ */
+
+
